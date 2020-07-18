@@ -1,0 +1,8 @@
+completion:
+  cmd: PYTHONPATH=. shtab foo.parser -s bash > foo_completion.sh
+  deps:
+  - path: foo.py
+    md5: 36ca8200ef49349fa689b5e3032dbd5a
+  outs:
+  - path: foo_completion.sh
+    md5: d04d947a9d536a8316a5e7b8cc31acea

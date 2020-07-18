@@ -1,2 +1,3 @@
 __pycache__/
 *.py[co]
+/foo_completion.sh
