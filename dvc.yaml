@@ -5,3 +5,9 @@ stages:
     - foo.py
     outs:
     - foo_completion.sh
+  out:
+    cmd: python foo.py -o out.txt
+    deps:
+    - foo.py
+    outs:
+    - out.txt
