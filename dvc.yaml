@@ -1,6 +1,6 @@
 stages:
   completion:
-    cmd: PYTHONPATH=. shtab foo.parser -s bash > foo_completion.sh
+    cmd: shtab foo.parser -s bash > foo_completion.sh
     deps:
     - foo.py
     outs:
