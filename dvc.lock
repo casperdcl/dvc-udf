@@ -5,12 +5,15 @@ completion:
     md5: 36ca8200ef49349fa689b5e3032dbd5a
   outs:
   - path: foo_completion.sh
-    md5: d04d947a9d536a8316a5e7b8cc31acea
+    md5: e762e7c2ad375ee2b7fa1a8a9b0bdccd
 out:
   cmd: python foo.py -o out.txt
   deps:
   - path: foo.py
+    cmd: python pyextract -f main,foo
     md5: 36ca8200ef49349fa689b5e3032dbd5a
+  - path: pyextract.py
+    md5: 9b28a7baf5d8d9a41b99339a5fc75be6
   outs:
   - path: out.txt
     md5: 891cfbf34acda26f98c05b53d08ceab6

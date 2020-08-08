@@ -1,12 +1,13 @@
 """Usage:
-  pyextract [options] <script> <function>...
+  pyextract [options] <script>
 
 Options:
   -h, --help  : print this message and exit
+  -f FUNC, --function FUNC  : comma-separated
+    names of functions/objects to print
 
 Arguments:
   <script>  : path to a `*.py` file (use `-` for stdin)
-  <function>  : names of functions to print
 """
 import importlib
 import inspect
@@ -38,7 +39,7 @@ def main(argv=None):
             os.path.splitext(os.path.basename(args.script))[0]
         )
 
-        for func in args.function:
+        for func in args.function.split(","):
             print(inspect.getsource(getattr(mod, func)), end="")
     finally:
         if tmpdir:

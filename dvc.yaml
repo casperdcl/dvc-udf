@@ -8,6 +8,8 @@ stages:
   out:
     cmd: python foo.py -o out.txt
     deps:
-    - foo.py
+    - pyextract.py
+    - foo.py:
+        cmd: python pyextract -f main,foo
     outs:
     - out.txt
